@@ -6,13 +6,13 @@
     <div class="col-md-10 offset-md-1">
         <div class="row">
             <div id="image-container" class="col-md-6">
-                <img src="/img/events/{{$event->image}}" alt="{{$event->title}}" class="img-fluid">
+                <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="img-fluid">
             </div>
             <div id="info-container" class="col-md-6">
-                <h1>{{$event->title}}</h1>
+                <h1>{{ $event->title }}</h1>
                 <p class="event-city">
                     <ion-icon name="location-outline"></ion-icon>
-                    {{$event->city}}
+                    {{ $event->city }}
                 </p>
                 <p class="events-participants">
                     <ion-icon name="people-outline"></ion-icon>
@@ -20,7 +20,7 @@
                 </p>
                 <p class="event-owner">
                     <ion-icon name="star-outline"></ion-icon>
-                    Dono do Evento
+                    {{ $eventOwner['name'] }}
                 </p>
                 <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
                 <h3>O evento conta com:</h3>
@@ -29,7 +29,7 @@
                         <li>
                             <ion-icon name="play-outline"></ion-icon>
                             <span>
-                                {{$item}}
+                                {{ $item }}
                             </span>
                         </li>
                     @endforeach
@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-12" id="description-container">
                 <h3>Sobre o evento:</h3>
-                <p class="event-description">{{$event->description}}</p>
+                <p class="event-description">{{ $event->description }}</p>
             </div>
         </div>
     </div>
